@@ -1,3 +1,11 @@
+  var config = {
+	    apiKey: "AIzaSyBy0V5ES1QyLAT-p6EtG339Lzyem5HgPG0",
+	    authDomain: "foodtruck-adcc6.firebaseapp.com",
+	    databaseURL: "https://foodtruck-adcc6.firebaseio.com",
+	    storageBucket: "foodtruck-adcc6.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+
 var database = firebase.database();
 
 jQuery(document).ready(function($) {
