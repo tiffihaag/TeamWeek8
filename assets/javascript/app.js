@@ -8,7 +8,7 @@
 
 var database = firebase.database();
 
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
   $.ajax({
   url : "http://api.wunderground.com/api/8c312b60d67290eb/geolookup/conditions/q/IA/Cedar_Rapids.json",
   dataType : "jsonp",
