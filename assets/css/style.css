@@ -1,5 +1,10 @@
+
 body {
-	background-image: url("../images/background.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
+    background-image: url("../images/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    font-family: 'Merriweather', serif;
+    font: white;
 }

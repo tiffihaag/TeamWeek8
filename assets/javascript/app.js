@@ -1,6 +1,14 @@
+  var config = {
+	    apiKey: "AIzaSyBy0V5ES1QyLAT-p6EtG339Lzyem5HgPG0",
+	    authDomain: "foodtruck-adcc6.firebaseapp.com",
+	    databaseURL: "https://foodtruck-adcc6.firebaseio.com",
+	    storageBucket: "foodtruck-adcc6.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+
 var database = firebase.database();
 
-jQuery(document).ready(function($) {
+$(document).ready(function($) {
   $.ajax({
   url : "http://api.wunderground.com/api/8c312b60d67290eb/geolookup/conditions/q/fl/orlando.json",
   dataType : "jsonp",
