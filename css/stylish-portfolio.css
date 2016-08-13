@@ -251,9 +251,11 @@ footer {
   right: 5px;
 }
 
+.citycenter {
+    text-align: center;
+}
 
-
-/* login css--------*/
+/* login css---------------------*/
 body {
     background: #ccc;
 }
