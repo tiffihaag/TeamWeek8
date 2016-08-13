@@ -252,7 +252,7 @@ footer {
 }
 
 .citycenter {
-    text-align: center;
+    align-content: center;
 }
 
 /* login css---------------------*/
