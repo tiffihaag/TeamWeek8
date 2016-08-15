@@ -1,9 +1,8 @@
- // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDbm7Gj4IrW52itBHXsV4R5wRG5rOGnWzU",
-    authDomain: "first-new-project.firebaseapp.com",
-    databaseURL: "https://first-new-project.firebaseio.com",
-    storageBucket: "first-new-project.appspot.com",
+var config = {
+    apiKey: "AIzaSyBy0V5ES1QyLAT-p6EtG339Lzyem5HgPG0",
+    authDomain: "foodtruck-adcc6.firebaseapp.com",
+    databaseURL: "https://foodtruck-adcc6.firebaseio.com",
+    storageBucket: "foodtruck-adcc6.appspot.com",
   };
   firebase.initializeApp(config);  
 
