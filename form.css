@@ -1,0 +1,24 @@
+
+#heading {
+	font-weight: bold
+}
+
+#signIn {
+	float: right;
+}
+
+#search{
+	text-align: left;
+	margin: 25px;
+}
+
+.bar {
+	margin: 0px 25px 0px 25px;
+}
+h1{
+	text-align: center;
+}
+
+
+
+
