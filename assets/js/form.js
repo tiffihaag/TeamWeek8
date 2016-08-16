@@ -13,11 +13,13 @@
 $("#search").on("click", function(){
     console.log("it works");
 	// displays in firebase upside down //
+
     var name = "";
     var business = "";
     var location = "";
     var date= "";
     var menu = "";
+
 	name = $('#name').val().trim();
 	business = $('#business').val().trim();
     location = $('#location').val().trim();
@@ -35,6 +37,7 @@ $("#search").on("click", function(){
 	});
 	return false;
  })
+
 database.ref().on("child_added", function(snapshot){
     // console.log //
     console.log(snapshot.val());
