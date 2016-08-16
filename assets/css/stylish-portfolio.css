@@ -31,6 +31,9 @@ body {
     font-weight: 700;
 }
 
+.calendar {
+    width: 850px; margin: 0 auto;
+}
 /* Custom Button Styles */
 
 .btn-dark {
