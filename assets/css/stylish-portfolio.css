@@ -20,6 +20,8 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .text-vertical-center h1 {
@@ -167,6 +169,9 @@ hr.small {
 
 .about {
     padding: 50px 0;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
 /* Services */
@@ -179,19 +184,6 @@ hr.small {
     margin-bottom: 30px;
 }
 
-/* Callout */
-
-.callout {
-    display: table;
-    width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
 
 /* Portfolio */

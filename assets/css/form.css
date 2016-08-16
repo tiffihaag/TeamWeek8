@@ -1,3 +1,14 @@
+body {
+    background-image: url("../img/formbkgrd.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    
+}
+.panel-default {
+	width: 850px; margin: 0 auto;
+}
 
 #heading {
 	font-weight: bold
