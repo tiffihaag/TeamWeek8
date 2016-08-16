@@ -19,8 +19,11 @@ h1{
 	text-align: center;
 }
 .Date {
-
 	margin: 25px;
+}
+
+.time {
+	position: relative;
 }
 
 

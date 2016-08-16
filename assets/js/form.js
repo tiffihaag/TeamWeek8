@@ -25,7 +25,7 @@ $("#search").on("click", function(){
 	business = $('#business').val().trim();
     location = $('#location').val().trim();
 	date = $('#datepicker').val();
-    date = $('#timeChoice').val();
+    time = $('#timeChoice').val();
 	menu = $('#menu').val().trim();
 
 
