@@ -60,10 +60,16 @@ database.ref().on("child_added", function(snapshot){
   });
 
 
+    $(function() {
+    $('#timeChoice').timepicker();
+     });
+
+    
   $("#datepicker").on("click", function(){
     var dates = [];
     var date = $("#newDate").html();
      dates.push(date);
-    
   });
+           
+
 

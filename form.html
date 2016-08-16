@@ -4,6 +4,7 @@
 	<title>Food Truck Information</title>
 	<link rel="stylesheet" type="text/css" href="assets\css\form.css">
     <link rel="stylesheet" type="text/css" href="assets\css\jQueryUI.css">
+     <link rel="stylesheet" type="text/css" href="assets\css\timepicker.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
@@ -73,6 +74,11 @@
               <p class="Date">Date: <input type="text" id="datepicker"></p>
               <div id="newDate"></div>
             </div>
+                  <div class="demo">
+                <p>Time:</p>
+                <p><input id="timeChoice" type="text" class="time" /></p>
+            </div>
+
         </div>
         </div>
     
@@ -89,7 +95,7 @@
           <label for="search">"..."</label>
           <input type="text" class="form-control" id="menu" placeholder="Search">
         </div>
-          <button id="search" type="submit" class="btn btn-default">Submit</button>
+          <button id="search" type="submit" class="btn btn-default" hred>Submit</button>
   
       </form>
     </table>
@@ -119,9 +125,11 @@
             </div>
         </div>
 
-<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets\js\timepicker.js"></script>
+
 <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
 <script type="text/javascript" src="assets\js\form.js"></script>
 <!-- Latest compiled and minified JavaScript -->
