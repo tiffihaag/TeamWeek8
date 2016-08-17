@@ -69,6 +69,11 @@ database.ref().on("child_added", function(snapshot){
     $('#timeChoice').timepicker();
      });
 
+    $(function() {
+    $('#timeEnd').timepicker();
+     });
+
+
 
   $("#datepicker").on("click", function(){
     var dates = [];
