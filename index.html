@@ -45,6 +45,8 @@
             'userId': 'me'
   });
 
+  window.location.href = "index2.html";
+
         //Display the user details
         request.execute(function (resp) {
             var profileHTML = '<div class="profile"><div class="head">Welcome '+resp.name.givenName+'! <a href="javascript:void(0);" onclick="signOut();">Sign out</a></div>';
