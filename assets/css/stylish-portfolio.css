@@ -5,6 +5,14 @@
  */
 
 /* Global Styles */
+#my-signin2 {
+    margin-left: 600px;
+}
+
+#AfterLogin {
+    visibility: hidden;
+    display: none;
+}
 
 html,
 body {
@@ -22,19 +30,25 @@ body {
     vertical-align: middle;
     padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
-    font-size: 4.5em;
+    font-size: 80px;
     font-weight: 700;
+    width: 1000px;
+    background-color: #d88935;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 3px 3px 3px white;
 }
 
 .calendar {
     width: 850px; margin: 0 auto;
 }
+
 /* Custom Button Styles */
 
 .btn-dark {
@@ -160,7 +174,7 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 550px;
     background: url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -182,6 +196,9 @@ hr.small {
 
 .services {
     padding: 50px 0;
+    background-color: #d88935;
+    border-top: 5px;
+    border-color: black;
 }
 
 .service-item {
@@ -189,24 +206,6 @@ hr.small {
 }
 
 
-
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
 
 /* Call to Action */
 
@@ -236,9 +235,7 @@ hr.small {
 
 /* Footer */
 
-footer {
-    padding: 100px 0;
-}
+
 
 #to-top {
   display: none;
@@ -252,9 +249,7 @@ footer {
 }
 
 /* login css---------------------*/
-body {
-    background: #ccc;
-}
+
 
 .form-signin {
   max-width: 280px;
@@ -290,6 +285,31 @@ body {
   border-left: 1px solid transparent;
   border-radius: 0px 0px 3px 3px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.text-muted {
+    margin-top: -28px;
+}
+
+.calendar {
+    padding: 25px;
+}
+.calpad {
+    padding: 20px;
+}
+
+/* clik here animation*/
+
+.btn-light:hover{
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
 }
 
 

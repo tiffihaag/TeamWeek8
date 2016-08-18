@@ -1,17 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-signin-client_id" content="480535686459-1cn1iqo3np6uf08n9o5nmdto4vcm9pls.apps.googleusercontent.com">
+  <meta keywords="food truck, food orlando">
+
+  <title>Orlando Local Food Trucks</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="assets/css/stylish-portfolio.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Style --> 
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- For Google Sign In -->
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
   <script src="https://apis.google.com/js/client:platform.js?onload=renderButton" async defer></script>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
 </head>
 
 <body>
-<div class="g-signin2">
 
-  <script>
+<script>
+$(".AfterLogin").hide();
+
   var googleUser = {};
 
   var startApp = function() {
@@ -36,6 +64,7 @@
         }, function(error) {
           alert(JSON.stringify(error, undefined, 2));
         });
+    $(".AfterLogin").show();
   }
 
   function onSuccess(googleUser) {
@@ -44,8 +73,6 @@
         var request = gapi.client.plus.people.get({
             'userId': 'me'
   });
-
-  window.location.href = "index2.html";
 
         //Display the user details
         request.execute(function (resp) {
@@ -127,9 +154,8 @@ function renderButton() {
     z-index: 1051 !important;
     }
   </style>
-</div>
 
-
+<div class="Login">
   <!-- HTML for render Google Sign-In button -->
   <!--<div id="gSignIn"></div> -->
   <!-- HTML for displaying user details -->
@@ -139,6 +165,234 @@ function renderButton() {
   successful sign in -->
   <div id="gSignInWrapper"></div>
   <div id="name"></div>
+
+<!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Orlando Local Food Trucks</h1>
+        </div>
+    </header>
+
+  <!-- Callout -->
+    <aside class="services about">
+         <div class="text-vertical-center">
+             <h2>The Orlando Local Food Trucks website is intended to connect local food trucks vendors with their customers. We invite truck vendors to join us and the local community to promote their business. Vendors can fill out a form to be added to our community of trucks to promote their business in our user-friendly database.  We're here to help you gain more business, more adversiting, and more people enjoying your food truck service.  Join the food truck community now by logging in with your Google account.</h2>
+             <br>
+            <!-- Google Sign In Div -->
+            <div id="my-signin2"class="g-signin2" data-onsuccess="onSignIn"></div>
+          </div>
+    </aside>
+
+</div>
+
+<div class="AfterLogin">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Orlando Local Food Trucks</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Search <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Search Trucks</a></li>
+        </li>
+         <li><a href="calendar.html">Calendar</a></li>
+        </li>
+        <li><a href="form.html">Add a truck</a></li>
+        </li>      </ul>
+        </li>>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  
+    
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Orlando Local Food Trucks</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="service-item">
+                                <span class="fa-stack fa-5x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-truck fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Search The Trucks</strong>
+                                </h4>
+                                <p>Search our list of food trucks by city</p>
+                                <a href="#" class="btn btn-light">Click Here</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="service-item">
+                                <span class="fa-stack fa-5x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-calendar fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Calendar</strong>
+                                </h4>
+                                <p>Check out our calendar for events</p>
+                                <a href="calendar.html" class="btn btn-light">Click Here</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="service-item">
+                                <span class="fa-stack fa-5x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-share-alt fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>Join Us</strong>
+                                </h4>
+                                <p>Fill out the form to join our list</p>
+                                <a href="#" class="btn btn-light">Click Here</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+     <!-- Map -->
+    <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Orlando,+FL&amp;output=embed"></iframe>
+        <br />
+        </iframe>
+    </section>
+
+</div>
+
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Orlando Local Food Trucks</strong>
+                    </h4>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-yelp fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Orlando Local Food Trucks 2016</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="assets/js/app.js"></script>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
+    </script>
 </body>
 <script>startApp();</script>
 </html>
