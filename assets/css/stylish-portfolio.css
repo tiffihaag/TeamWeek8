@@ -45,6 +45,7 @@ body {
     background-color: #d2a679;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 3px 3px 3px white;
 }
 
 .calendar {
@@ -308,4 +309,26 @@ hr.small {
 .text-muted {
     margin-top: -28px;
 }
+
+.calendar {
+    padding: 20px;
+}
+.calpad {
+    padding: 20px;
+}
+
+/* clik here animation*/
+
+.btn-light:hover{
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
 
