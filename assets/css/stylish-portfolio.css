@@ -42,7 +42,7 @@ body {
     font-size: 80px;
     font-weight: 700;
     width: 1000px;
-    background-color: #ffd966;
+    background-color: #d2a679;
     margin-left: auto;
     margin-right: auto;
 }
@@ -198,7 +198,7 @@ hr.small {
 
 .services {
     padding: 50px 0;
-    background-color: #ffd966;
+    background-color: #d2a679;
 }
 
 .service-item {
