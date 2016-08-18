@@ -1,3 +1,5 @@
+$(".AfterLogin").hide();
+
 //Firebase
 var config = {
   apiKey: "AIzaSyBy0V5ES1QyLAT-p6EtG339Lzyem5HgPG0",
@@ -32,9 +34,13 @@ function onSignIn(googleUser) {
 
 function onSuccess(googleUser) {
   console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  $(".AfterLogin").show();
+  $(".Login").hide();
   }
+
   function onFailure(error) {
   console.log(error);
+  $(".AfterLogin").hide();
   }
 
 //Google Map
