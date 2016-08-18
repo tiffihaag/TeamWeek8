@@ -32,9 +32,6 @@ body {
     padding-right: 100px;
     padding-bottom: 20px;
 }
-.header {
-    background-color: white;
-}
 
 .text-vertical-center h1 {
     margin: 0;
@@ -42,7 +39,7 @@ body {
     font-size: 80px;
     font-weight: 700;
     width: 1000px;
-    background-color: #d2a679;
+    background-color: #d88935;
     margin-left: auto;
     margin-right: auto;
     text-shadow: 3px 3px 3px white;
@@ -177,7 +174,7 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 550px;
     background: url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -199,7 +196,9 @@ hr.small {
 
 .services {
     padding: 50px 0;
-    background-color: #d2a679;
+    background-color: #d88935;
+    border-top: 5px;
+    border-color: black;
 }
 
 .service-item {
@@ -207,24 +206,6 @@ hr.small {
 }
 
 
-
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
 
 /* Call to Action */
 
@@ -311,7 +292,7 @@ hr.small {
 }
 
 .calendar {
-    padding: 20px;
+    padding: 25px;
 }
 .calpad {
     padding: 20px;
