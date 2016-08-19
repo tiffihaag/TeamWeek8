@@ -5,13 +5,20 @@
  */
 
 /* Global Styles */
-#my-signin2 {
-    margin-left: 600px;
+.hello {
+  font-size: 32px;
+  background-color: #d88935;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#AfterLogin {
-    visibility: hidden;
+.AfterLogin {
     display: none;
+}
+
+#mysignin2 {
+    margin-left: 540px;
 }
 
 html,
@@ -174,7 +181,7 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 550px;
+    height: 380px;
     background: url(../img/bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -220,7 +227,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 500px;
+    height: 400px;
 }
 
 @media(max-width:768px) {
@@ -367,3 +374,25 @@ hr.small {
   .pac-container {
   z-index: 1051 !important;
   }
+  .fa-truck, .fa-calendar, .fa-share-alt {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Header animation*/
+#animation {
+  animation-duration: 4s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+  
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
