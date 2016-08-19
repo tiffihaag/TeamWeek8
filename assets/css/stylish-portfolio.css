@@ -5,10 +5,11 @@
  */
 
 /* Global Styles */
-
-#mysignin2{
-  margin-left: auto;
-  margin-right: auto;
+h2{
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .hello {
@@ -23,8 +24,12 @@
     display: none;
 }
 
+.Login {
+  padding-bottom: -200px;
+}
+
 #mysignin2 {
-    margin-left: 575px;
+    margin-left: 675px;
 }
 
 html,
@@ -109,13 +114,13 @@ hr.small {
     background: #222;
     -webkit-transition: all 0.4s ease 0s;
     -moz-transition: all 0.4s ease 0s;
-    -ms-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
+    -ms-: all 0.4s ease 0s;
+    -o-trtransitionansition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
 }
 
 .sidebar-nav {
-    position: absolute;
+   
     top: 0;
     width: 250px;
     margin: 0;
@@ -201,7 +206,6 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -216,7 +220,6 @@ hr.small {
 /* Services */
 
 .services {
-    padding: 50px 150px 50px 150px;
     background-color: #d88935;
     border-top: 5px;
     border-color: black;
@@ -242,8 +245,8 @@ hr.small {
 
 /* Map */
 
-.map {
-    height: 500px;
+#map {
+    height: 300px;
 }
 
 @media(max-width:768px) {

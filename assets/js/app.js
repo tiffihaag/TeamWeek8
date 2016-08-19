@@ -93,6 +93,15 @@ $( document ).ready(function() {
     //$(".AfterLogin").hide();
     }
 
+  //Google Map
+     var map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 28.538335, lng: -81.379236},
+            zoom: 7
+          });
+        }
+
   //Firebase
   var config = {
     apiKey: "AIzaSyBy0V5ES1QyLAT-p6EtG339Lzyem5HgPG0",
@@ -104,15 +113,6 @@ $( document ).ready(function() {
   firebase.initializeApp(config);
 
   var database = firebase.database();
-
-  //Google Map
-   var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 28.538335, lng: -81.379236},
-          zoom: 7
-        });
-      }
 
   /*!
    * jquery-timepicker v1.11.1 - A jQuery timepicker plugin inspired by Google Calendar. It supports both mouse and keyboard navigation.
