@@ -1,5 +1,5 @@
 body {
-    background-image: url("../img/formbkgrd.jpg");
+    background-image: url("../img/bg.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -29,19 +29,18 @@ body {
 h1{
 	text-align: center;
 }
-.Date {
-	margin: 25px;
-}
-
-.time {
-	position: relative;
-}
-.demo {
-	float: right;
-}
-
-
 .calendar {
     width: 850px; margin: 0 auto;
 }
+.date{
+	text-align: center;
+	font-weight: bold;
+}
+.panel-body{
+	text-align: center;
+}
+.time{
+	font-weight: bold;
+}
+
 
