@@ -5,6 +5,12 @@
  */
 
 /* Global Styles */
+
+#mysignin2{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hello {
   font-size: 32px;
   background-color: #d88935;
@@ -18,7 +24,7 @@
 }
 
 #mysignin2 {
-    margin-left: 540px;
+    margin-left: 575px;
 }
 
 html,
@@ -180,6 +186,8 @@ hr.small {
 .header {
     display: table;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     height: 380px;
     background: url(../img/bg.jpg) no-repeat center center scroll;
@@ -199,13 +207,21 @@ hr.small {
     vertical-align: middle;
 }
 
+.text-vertical-center2{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Services */
 
 .services {
-    padding: 50px 0;
+    padding: 50px 150px 50px 150px;
     background-color: #d88935;
     border-top: 5px;
     border-color: black;
+    text-align: justify;
+
 }
 
 .service-item {
@@ -227,7 +243,7 @@ hr.small {
 /* Map */
 
 .map {
-    height: 400px;
+    height: 500px;
 }
 
 @media(max-width:768px) {
@@ -395,4 +411,9 @@ hr.small {
     margin-left:0%;
     width:100%;
   }
+}
+
+.weather{
+  padding-left: 320px;
+  background-color: #d88935;
 }
