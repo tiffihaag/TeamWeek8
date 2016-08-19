@@ -42,9 +42,14 @@
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
+
+  <!--Google Map-->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+    async defer></script>
 </head>
 
 <body>
+
 <div class="Login">
   <!-- HTML for render Google Sign-In button -->
   <!--<div id="gSignIn"></div> -->
@@ -59,7 +64,7 @@
   <!-- Header -->
   <header id="top" class="header">
     <div class="text-vertical-center">
-      <h1>Orlando Local Food Trucks</h1>
+      <h1 id="animation">Orlando Local Food Trucks</h1>
       <div class="hello"></div>
     </div>
   </header>
@@ -103,7 +108,10 @@
   </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-  
+
+  <!--For Map API-->
+  <div id="map"></div>
+
   <!-- Services -->
   <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
   <section id="services" class="services">
@@ -111,6 +119,11 @@
       <div class="row text-center">
         <div class="col-lg-10 col-lg-offset-1">
           <h2>Orlando Local Food Trucks</h2>
+            <!--Embedded Weather Forecast-->
+              <div class="weather">
+                <span style="display: block !important; width: 320px; text-align: center; font-family: sans-serif; font-size: 12px; background-color: #d88935"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:32801.1.99999&bannertypeclick=wu_clean2day" title="Orlando, Florida Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&airportcode=KORL&ForcedCity=Orlando&ForcedState=FL&zip=32801&language=EN" alt="Find more about Weather in Orlando, FL" width="300" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:32801.1.99999&bannertypeclick=wu_clean2day" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank">Click for weather forecast</a></span> 
+              </div>
+
             <hr class="small">
               <div class="row">
                 
@@ -154,13 +167,6 @@
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section>
-
-  <!-- Map -->
-  <section id="contact" class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Orlando,+FL&amp;output=embed"></iframe>
-    <br/>
-    </iframe>
-  </section>
 
   <!-- Footer -->
     <footer>
