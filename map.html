@@ -43,20 +43,28 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
 
+  <!--Google Map-->
+<!--   <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl8ugvkVIdL8VsymI4fXx_y1yimXLC4y0&callback=initMap"
+    async defer></script> -->
 </head>
 
 <body>
 
-<div class="Login">
+
+<body>
+
+<!-- <div class="Login"> -->
   <!-- HTML for render Google Sign-In button -->
   <!--<div id="gSignIn"></div> -->
   <!-- HTML for displaying user details -->
-  <div class="userContent"></div>
+  <!-- <div class="userContent"></div> -->
 
   <!-- In the callback, you would hide the gSignInWrapper element on a
   successful sign in -->
-  <div id="gSignInWrapper"></div>
-  <div id="name"></div>
+ <!--  <div id="gSignInWrapper"></div>
+  <div id="name"></div> -->
 
   <!-- Header -->
   <header id="top" class="header">
@@ -71,14 +79,16 @@
     <div class="text-vertical-center2">
       <h2>The Orlando Local Food Trucks website is intended to connect local food trucks vendors with their customers. We invite truck vendors to join us and the local community to promote their business. Vendors can fill out a form to be added to our community of trucks to promote their business in our user-friendly database.  We're here to help you gain more business, more adversiting, and more people enjoying your food truck service.  Join the food truck community now by logging in with your Google account.</h2>
       <br>
+
     
     <!-- Google Sign In Div -->
-    <div id="mysignin2" class="gsignin" data-onsuccess="onSignIn"></div>
+    <!--<div id="mysignin2" class="gsignin" data-onsuccess="onSignIn"></div>
     </div>
   </div>
-</div><!--goes with .Login-->
+</div> -->
+<!--goes with .Login--> 
 
-<div class="AfterLogin">
+<!-- <div class="AfterLogin"> -->
   <!-- Navigation -->
   <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -106,6 +116,13 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+  <!-- Callout -->
+  <div class="services about">
+    <div class="text-vertical-center2">
+      <h2>The Orlando Local Food Trucks website is intended to connect local food trucks vendors with their customers. We invite truck vendors to join us and the local community to promote their business. Vendors can fill out a form to be added to our community of trucks to promote their business in our user-friendly database.  We're here to help you gain more business, more adversiting, and more people enjoying your food truck service.  Join the food truck community now by logging in with your Google account.</h2>
+      <br>
+
+
   <!--For Map API-->
   <div class="container">
   <div class="row text-center form">
@@ -116,7 +133,6 @@
     <div id="map" class="col-xs-6"></div>
     <div id="map-directions" class="col-xs-6"></div>
   </div>
-</div>
 
   <!-- Services -->
   <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -195,8 +211,117 @@
     </footer>
 
 </div><!--goes with .AfterLogin-->
+</body>
+</html>
 
-<!-- google map-->
+<div class="AfterLogin">
+  <!-- Navigation -->
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">Orlando Local Food Trucks</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="search.html">Search <span class="sr-only">(current)</span></a></li>
+      <li><a href="#">Search Trucks</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="form.html">Add a truck</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <!--For Map API-->
+ <!--  <div id="map"></div> -->
+
+  <!-- Services -->
+  <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-10 col-lg-offset-1">
+          <h2>Orlando Local Food Trucks</h2>
+            <!--Embedded Weather Forecast-->
+              <div class="weather">
+                <span style="display: block !important; width: 320px; text-align: center; font-family: sans-serif; font-size: 12px; background-color: #d88935"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:32801.1.99999&bannertypeclick=wu_clean2day" title="Orlando, Florida Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&airportcode=KORL&ForcedCity=Orlando&ForcedState=FL&zip=32801&language=EN" alt="Find more about Weather in Orlando, FL" width="300" /></a><br><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:32801.1.99999&bannertypeclick=wu_clean2day" title="Get latest Weather Forecast updates" style="font-family: sans-serif; font-size: 12px" target="_blank">Click for weather forecast</a></span> 
+              </div>
+
+            <hr class="small">
+              <div class="row">
+                
+                <div class="col-md-4">
+                  <div class="service-item">
+                    <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-truck fa-stack-1x text-primary"></i>
+                    </span>
+                      <h4><strong>Search The Trucks</strong></h4>
+                      <p>Search our list of food trucks by city</p>
+                      <a href="search.html" class="btn btn-light">Click Here</a>
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="service-item">
+                    <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-calendar fa-stack-1x text-primary"></i>
+                    </span>
+                      <h4><strong>Calendar</strong></h4>
+                      <p>See our calendar of events</p>
+                      <a href="calendar.html" class="btn btn-light">Click Here</a>
+                  </div>
+                </div>
+                        
+                <div class="col-md-4">
+                  <div class="service-item">
+                    <span class="fa-stack fa-4x">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-share-alt fa-stack-1x text-primary"></i>
+                    </span>
+                        <h4><strong>Share</strong></h4>
+                        <p>Share with Friends</p>
+                        <a href="gmail.google.com" class="btn btn-light">Click Here</a>
+                  </div>
+                </div>        
+              </div><!-- /.row (nested) -->
+          </div><!-- /.col-lg-10 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section>
+
+  <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <h4><strong>Orlando Local Food Trucks</strong></h4>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a></li>
+                <li><a href="#"><i class="fa fa-yelp fa-fw fa-3x"></i></a></li>
+              </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Orlando Local Food Trucks 2016</p>
+          </div>
+        </div>
+      </div>
+      
+      <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+</div><!--goes with .AfterLogin-->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChFKfGT-QBuYU5Wqu9jonp9Rp2sb0S35w&callback=initMap" type="text/javascript"></script>
 <script>
   function initMap() {
@@ -231,5 +356,6 @@
     });
   }
 </script>
+
 </body>
 </html>
