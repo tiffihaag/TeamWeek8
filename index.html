@@ -146,17 +146,6 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-  <!--For Map API-->
-  <div class="container">
-  <div class="row text-center form">
-    <input id="search" type="text">
-    <button id="submit">Submit</button>
-  </div>
-  <div class="row map-view">
-    <div id="map" class="col-xs-6"></div>
-    <div id="map-directions" class="col-xs-6"></div>
-  </div>
-</div>
 
   <!-- Services -->
   <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -236,40 +225,6 @@
 
 </div><!--goes with .AfterLogin-->
 
-<!-- google map-->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChFKfGT-QBuYU5Wqu9jonp9Rp2sb0S35w&callback=initMap" type="text/javascript"></script>
-<script>
-  function initMap() {
-    mapDiv = document.getElementById('map');
-    map = new google.maps.Map(mapDiv, {
-      //set center of map on load
-  center: {lat: 28.538335, lng: -81.379236},
-  //set zoom, lower number means zoom out, and vice versa
-  zoom: 9,
-  //you can set map type to roadmap, terrain, satellite, or hybrid
-  mapTypeId: 'terrain',
-  //If you plan to move a control on the screen
-  //it is recommened to set that control to true to always show
-  mapTypeControl: true,
-  //this sets the position, go to docs to see other positions
-  mapTypeControlOptions: {
-  position: google.maps.ControlPosition.TOP_LEFT
-  },
-  //same as before, just different controls
-  fullscreenControl: true,
-  fullscreenControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP
-  },
-  streetViewControl: true,
-  streetViewControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP 
-  },
-  zoomControl: true,
-  zoomControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP
-  }
-    });
-  }
-</script>
+
 </body>
 </html>
