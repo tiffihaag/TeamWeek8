@@ -1,11 +1,11 @@
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDbm7Gj4IrW52itBHXsV4R5wRG5rOGnWzU",
-    authDomain: "first-new-project.firebaseapp.com",
-    databaseURL: "https://first-new-project.firebaseio.com",
-    storageBucket: "first-new-project.appspot.com",
-  };
-  firebase.initializeApp(config);
+ // Initialize Firebase
+ var config = {
+   apiKey: "AIzaSyBy0V5ES1QyLAT-p6EtG339Lzyem5HgPG0",
+   authDomain: "foodtruck-adcc6.firebaseapp.com",
+   databaseURL: "https://foodtruck-adcc6.firebaseio.com",
+   storageBucket: "foodtruck-adcc6.appspot.com",
+ };
+ firebase.initializeApp(config);
 
   var database = firebase.database();
 
@@ -104,8 +104,8 @@ database.ref().on("child_added", function(snapshot){
 
 
 
-//If we need to clear the values off the form, this is the example on how
-//$('.trainName').val("");
+If we need to clear the values off the form, this is the example on how
+$('.trainName').val("");
 
 
 
@@ -144,4 +144,4 @@ database.ref().on('child_added', function(childSnapshot) {
     tableElem.append($('<td>').text(childSnapshot.val().tmenu));
     tableElem.append($('<td>').text(childSnapshot.val().tcomment));
     $('#tBody').append(tableElem);
-}
+  }
