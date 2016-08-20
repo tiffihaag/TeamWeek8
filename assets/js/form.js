@@ -30,13 +30,13 @@ $("#search").on("click", function(){
 	name = $('#name').val().trim();
 	email = $("#email").val().trim();
 	business = $('#business').val().trim();
-    address = $('#address').val().trim();
-    city = $("#city").val().trim();
-    state = $('#state').val().trim();
-    zip = $('#zip').val().trim();
+  address = $('#address').val().trim();
+  city = $("#city").val().trim();
+  state = $('#state').val().trim();
+  zip = $('#zip').val().trim();
 	date = $('#datepicker').val().trim();
-    start = $('#start').val().trim();
-    end = $('#end').val().trim();
+  start = $('#start').val().trim();
+  end = $('#end').val().trim();
 	menu = $('#menu').val().trim();
 	comment = $("#comment").val().trim();
 
@@ -49,14 +49,13 @@ $("#search").on("click", function(){
 		state: state,
 		zip: zip,
 		date: date,
-        start: start,
-        end: end,
-        menu: menu,
-        comment: comment
-
+    start: start,
+    end: end,
+    menu: menu,
+    comment: comment
 	});
+
 	return false;
- })
 
 database.ref().on("child_added", function(snapshot){
     // console.log //
@@ -87,61 +86,62 @@ database.ref().on("child_added", function(snapshot){
   var end = snapshot.val().end
   var menu = snapshot.val().menu
   var comment = snapshot.val().comment
-});
+  }); //child added
+}); //onclick
 
   $( function() {
-    $( "#datepicker" ).datepicker();
+    $("#datepicker").datepicker();
   });
 
-
-    $(function() {
+  $(function() {
     $('#start').timepicker();
-     });
+  });
 
-    $(function() {
+  $(function() {
     $('#end').timepicker();
-     });
-
-
-
-If we need to clear the values off the form, this is the example on how
-$('.trainName').val("");
-
+  });
 
 
 //For the Search Bar
 $("#searchDatabase").on("click", function(){
-  var cityName = $("#searchMe").val();
+  var cityName = $(".searchBar").val();
   
-//Match the city from the dropdown to the city field in the database
+  var tname = childSnapshot.val().name;
+  var temail = childSnapshot.val().email;
+  var tbusiness = childSnapshot.val().business;
+  var taddress = childSnapshot.val().address;
+  var tcity = childSnapshot.val().city;
+  var tstate = childSnapshot.val().state;
+  var tzip = childSnapshot.val().zip;
+  var tdateTime = childSnapshot.val().dateTime;
+  var tstart = childSnapshot.val().start;
+  var tend = childSnapshot.val().end;
+  var tmenu = childSnapshot.val().menu;
+  var tcomment = childSnapshot.val().comment;
 
-database.ref().on('child_added', function(childSnapshot) {
-    console.log(childSnapshot.val());
-    var tname = childSnapshot.val().name;
-    var temail = childSnapshot.val().email;
-    var tbusiness = childSnapshot.val().business;
-    var taddress = childSnapshot.val().address;
-    var tcity = childSnapshot.val().city;
-    var tstate = childSnapshot.val().state;
-    var tzip = childSnapshot.val().zip;
-    var tdateTime = childSnapshot.val().dateTime;
-    var tstart = childSnapshot.val().start;
-    var tend = childSnapshot.val().end;
-    var tmenu = childSnapshot.val().menu;
-    var tcomment = childSnapshot.val().comment;
- 
-  var tableElem = $('<tr>').attr("dataName", childSnapshot.val().trainName);
-    tableElem.append($('<td>').text(childSnapshot.val().tname));
-    tableElem.append($('<td>').text(childSnapshot.val().temail));
-    tableElem.append($('<td>').text(childSnapshot.val().tbusiness));
-    tableElem.append($('<td>').text(childSnapshot.val().taddress));
-    tableElem.append($('<td>').text(childSnapshot.val().tcity));
-    tableElem.append($('<td>').text(childSnapshot.val().tstate));
-    tableElem.append($('<td>').text(childSnapshot.val().tzip));
-    tableElem.append($('<td>').text(childSnapshot.val().tdateTime));
-    tableElem.append($('<td>').text(childSnapshot.val().tstart));
-    tableElem.append($('<td>').text(childSnapshot.val().tend));
-    tableElem.append($('<td>').text(childSnapshot.val().tmenu));
-    tableElem.append($('<td>').text(childSnapshot.val().tcomment));
-    $('#tBody').append(tableElem);
+  for (var i = 0; i < child.length; i++) {
+    if (cityName == tcity) {
+      var tableElem = $('<tr>').attr("dataName", childSnapshot.val().trainName);
+      tableElem.append($('<td>').text(childSnapshot.val().tname));
+      tableElem.append($('<td>').text(childSnapshot.val().temail));
+      tableElem.append($('<td>').text(childSnapshot.val().tbusiness));
+      tableElem.append($('<td>').text(childSnapshot.val().taddress));
+      tableElem.append($('<td>').text(childSnapshot.val().tcity));
+      tableElem.append($('<td>').text(childSnapshot.val().tstate));
+      tableElem.append($('<td>').text(childSnapshot.val().tzip));
+      tableElem.append($('<td>').text(childSnapshot.val().tdateTime));
+      tableElem.append($('<td>').text(childSnapshot.val().tstart));
+      tableElem.append($('<td>').text(childSnapshot.val().tend));
+      tableElem.append($('<td>').text(childSnapshot.val().tmenu));
+      tableElem.append($('<td>').text(childSnapshot.val().tcomment));
+      $('#tBody').append(tableElem);
+    }
+  else {
+    console.log("Not a city");
   }
+
+  } //for closure
+}); //searchDatabase
+
+
+  

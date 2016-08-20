@@ -34,6 +34,8 @@
 
   <!-- Javascript -->
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/form.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
 
   <!-- For Google Sign In -->
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
@@ -83,17 +85,23 @@
     <div class="searchBar">List by City
     <select name="searchMe" id="searchMe">
       <option value="" selected="true">Please Select a City</option>
-      <option value="Orlando">Orlando</option>
-      <option value="Maitland">Maitland</option>
-      <option value="Altamonte Springs">Altamonte Springs</option>
-      <option value="Sanford">Sanford</option>
-      <option value="Winter Park">Winter Park</option>
-      <option value="Apopka">Apopka</option>
-      <option value="Lake Mary">Lake Mary</option>
-      <option value="Cassleberry">Cassleberry</option>
-      <option value="Occee">Occee</option>
+      <option value="AltamonteSprings">Altamonte Springs</option>
+      <option value="Casselberry">Casselberry</option>
+      <option value="Clermont">Clermont</option>
+      <option value="Heathrow">Heathrow</option>
       <option value="Kissimmee">Kissimmee</option>
+      <option value="LakeBuenaVista">Lake Buena Vista</option>
+      <option value="LakeMary">Lake Mary</option>
+      <option value="Longwood">Longwood</option>
+      <option value="Maitland">Maitland</option>
+      <option value="Orlando">Orlando</option>
+      <option value="Oviedo">Oviedo</option>
+      <option value="Sanford">Sanford</option>
+      <option value="WinterGarden">Winter Garden</option>
+      <option value="WinterPark">Winter Park</option>
+      <option value="WinterSprings">Winter Springs</option>
     </select>
+
     <input type="button" name="SearchDatabase" id="searchDatabase" value="Search"></div>
       <div class="results">Search Results</div>
         <table class="resultsTable">
@@ -145,18 +153,6 @@
   </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-  <!--For Map API-->
-  <div class="container">
-  <div class="row text-center form">
-    <input id="search" type="text">
-    <button id="submit">Submit</button>
-  </div>
-  <div class="row map-view">
-    <div id="map" class="col-xs-6"></div>
-    <div id="map-directions" class="col-xs-6"></div>
-  </div>
-</div>
 
   <!-- Services -->
   <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
@@ -236,40 +232,5 @@
 
 </div><!--goes with .AfterLogin-->
 
-<!-- google map-->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChFKfGT-QBuYU5Wqu9jonp9Rp2sb0S35w&callback=initMap" type="text/javascript"></script>
-<script>
-  function initMap() {
-    mapDiv = document.getElementById('map');
-    map = new google.maps.Map(mapDiv, {
-      //set center of map on load
-  center: {lat: 28.538335, lng: -81.379236},
-  //set zoom, lower number means zoom out, and vice versa
-  zoom: 9,
-  //you can set map type to roadmap, terrain, satellite, or hybrid
-  mapTypeId: 'terrain',
-  //If you plan to move a control on the screen
-  //it is recommened to set that control to true to always show
-  mapTypeControl: true,
-  //this sets the position, go to docs to see other positions
-  mapTypeControlOptions: {
-  position: google.maps.ControlPosition.TOP_LEFT
-  },
-  //same as before, just different controls
-  fullscreenControl: true,
-  fullscreenControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP
-  },
-  streetViewControl: true,
-  streetViewControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP 
-  },
-  zoomControl: true,
-  zoomControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP
-  }
-    });
-  }
-</script>
 </body>
 </html>
