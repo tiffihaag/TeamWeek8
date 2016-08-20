@@ -103,5 +103,45 @@ database.ref().on("child_added", function(snapshot){
      });
 
 
- 
 
+//If we need to clear the values off the form, this is the example on how
+//$('.trainName').val("");
+
+
+
+//For the Search Bar
+$("#searchDatabase").on("click", function(){
+  var cityName = $("#searchMe").val();
+  
+//Match the city from the dropdown to the city field in the database
+
+database.ref().on('child_added', function(childSnapshot) {
+    console.log(childSnapshot.val());
+    var tname = childSnapshot.val().name;
+    var temail = childSnapshot.val().email;
+    var tbusiness = childSnapshot.val().business;
+    var taddress = childSnapshot.val().address;
+    var tcity = childSnapshot.val().city;
+    var tstate = childSnapshot.val().state;
+    var tzip = childSnapshot.val().zip;
+    var tdateTime = childSnapshot.val().dateTime;
+    var tstart = childSnapshot.val().start;
+    var tend = childSnapshot.val().end;
+    var tmenu = childSnapshot.val().menu;
+    var tcomment = childSnapshot.val().comment;
+ 
+  var tableElem = $('<tr>').attr("dataName", childSnapshot.val().trainName);
+    tableElem.append($('<td>').text(childSnapshot.val().tname));
+    tableElem.append($('<td>').text(childSnapshot.val().temail));
+    tableElem.append($('<td>').text(childSnapshot.val().tbusiness));
+    tableElem.append($('<td>').text(childSnapshot.val().taddress));
+    tableElem.append($('<td>').text(childSnapshot.val().tcity));
+    tableElem.append($('<td>').text(childSnapshot.val().tstate));
+    tableElem.append($('<td>').text(childSnapshot.val().tzip));
+    tableElem.append($('<td>').text(childSnapshot.val().tdateTime));
+    tableElem.append($('<td>').text(childSnapshot.val().tstart));
+    tableElem.append($('<td>').text(childSnapshot.val().tend));
+    tableElem.append($('<td>').text(childSnapshot.val().tmenu));
+    tableElem.append($('<td>').text(childSnapshot.val().tcomment));
+    $('#tBody').append(tableElem);
+}

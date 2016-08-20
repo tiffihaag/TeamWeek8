@@ -5,6 +5,18 @@
  */
 
 /* Global Styles */
+.results{
+  width: 100%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.resultsTable{
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+}
+
 h2{
   padding-left: 100px;
   padding-right: 100px;

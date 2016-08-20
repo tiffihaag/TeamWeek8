@@ -78,6 +78,46 @@
   </div>
 </div><!--goes with .Login-->
 
+<!--for the Search field - for users-->
+<div class="searchResults"> 
+    <div class="searchBar">List by City
+    <select name="searchMe" id="searchMe">
+      <option value="" selected="true">Please Select a City</option>
+      <option value="Orlando">Orlando</option>
+      <option value="Maitland">Maitland</option>
+      <option value="Altamonte Springs">Altamonte Springs</option>
+      <option value="Sanford">Sanford</option>
+      <option value="Winter Park">Winter Park</option>
+      <option value="Apopka">Apopka</option>
+      <option value="Lake Mary">Lake Mary</option>
+      <option value="Cassleberry">Cassleberry</option>
+      <option value="Occee">Occee</option>
+      <option value="Kissimmee">Kissimmee</option>
+    </select>
+    <input type="button" name="SearchDatabase" id="searchDatabase" value="Search"></div>
+      <div class="results">Search Results</div>
+        <table class="resultsTable">
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>email</th>
+              <th>business</th>
+              <th>address</th>
+              <th>city</th>
+              <th>state</th>
+              <th>zip</th>
+              <th>date</th>
+              <th>start</th>
+              <th>end</th>
+              <th>menu</th>
+              <th>comment</th>
+            </tr> 
+          </thead>
+          <tbody id="tBody">
+          </tbody>
+        </table>
+      </div>
+
 <div class="AfterLogin">
   <!-- Navigation -->
   <nav class="navbar navbar-default">
