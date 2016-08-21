@@ -105,7 +105,7 @@ database.ref().on("child_added", function(snapshot){
 //For the Search Bar
 $("#searchDatabase").on("click", function(){
   var cityName = $(".searchBar").val();
-  
+  console.log("Whaaaaa");
   var tname = childSnapshot.val().name;
   var temail = childSnapshot.val().email;
   var tbusiness = childSnapshot.val().business;

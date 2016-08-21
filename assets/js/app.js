@@ -84,6 +84,7 @@ $( document ).ready(function() {
     $(".AfterLogin").show();
     $("#mysignin2").hide();
     $(".text-vertical-center2").hide();
+    $(".searchResults").hide();
     //$(".AfterLogin").css({"visibility", "visible"});
     //$(".Login").hide();
     }
