@@ -16,6 +16,8 @@
   <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 
+<!-- nav bar-->
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
 
@@ -47,26 +49,51 @@
     <div class="text-vertical-center">
         <div class="calpad">
         <h1>Orlando Trucks Calendar</h1>
-    </div>          
+    </div>  
+    <h3 class="calsub">Check out our calendar below for up to date Orlando Food Truck events and locations.</h3>        
       
     <div class="calendar">
-      <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=orlfoodtrucks%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <iframe class="cal" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=orlfoodtrucks%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
- 
-
-   <!--For Map API-->
-  <div class="container">
-  <div class="row text-center form">
-  <h2>Find the Location</h2>
-  </div>
-  <div class="row map-view">
-    <div id="map" class="col-xs-6"></div>
-    <div id="map-directions" class="col-xs-6"></div>
-  </div>
-</div>
-
  </header>
 
+ <!-- map-->
+<section id="services" class="services">
+    <div class="container">
+      <div class="row text-center">
+               <!--For Map API-->
+              <div class="row text-center form">
+              <h2>Find the Location</h2>
+              </div>
+              <div class="row map-view">
+                <div id="map" class="col-xs-12"></div>
+                <div id="map-directions" class="col-xs-12"></div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </section>  
+        </div>
+        </div>
+
+<!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-lg-offset-1 text-center">
+            <h4><strong>Orlando Local Food Trucks</strong></h4>
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a></li>
+                <li><a href="#"><i class="fa fa-yelp fa-fw fa-3x"></i></a></li>
+              </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Orlando Local Food Trucks 2016</p>
+                 <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+          </div>
+        </div>
+      </div> 
+    </footer>
 
 
 <!-- scripts-->
@@ -118,24 +145,5 @@
 </script>
 
 </body>
-<!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-lg-offset-1 text-center">
-            <h4><strong>Orlando Local Food Trucks</strong></h4>
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a></li>
-                <li><a href="#"><i class="fa fa-yelp fa-fw fa-3x"></i></a></li>
-              </ul>
-                <hr class="small">
-                <p class="text-muted">Copyright &copy; Orlando Local Food Trucks 2016</p>
-                 <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-          </div>
-        </div>
-      </div>
-      
-     
-    </footer>
+
 </html>
