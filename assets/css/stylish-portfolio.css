@@ -5,6 +5,7 @@
  */
 
 /* Global Styles */
+
 .results{
   width: 100%;
   font-size: 28px;
@@ -16,6 +17,21 @@
   font-size: 22px;
   font-weight: bold;
 }
+
+.resultsTable{
+  width: 100%;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.tBody{
+  background-color: white;
+}
+.tableStuff {
+  height: 50%;
+  width: 100%;
+  font-size: 20px;
+  }
 
 h2{
   padding-right: 50px;
@@ -47,7 +63,7 @@ h2{
   background-color: white;
   border-style: solid;
   border-top: thick double black;
-  height: 250px;
+  height: 550px;
   padding-left: 50px;
   padding-right: 50px;
 }

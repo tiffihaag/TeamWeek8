@@ -64,6 +64,8 @@
                <!--For Map API-->
               <div class="row text-center form">
               <h2>Find the Location</h2>
+              <input id="search" type="text">
+              <button id="submit">Submit</button>
               </div>
               <div class="row map-view">
                 <div id="map" class="col-xs-12"></div>
@@ -106,43 +108,151 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-<!-- google map-->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChFKfGT-QBuYU5Wqu9jonp9Rp2sb0S35w&callback=initMap" type="text/javascript"></script>
 <script>
+
+  markers = [];
 
   function initMap() {
     mapDiv = document.getElementById('map');
     map = new google.maps.Map(mapDiv, {
       //set center of map on load
-  center: {lat: 28.538335, lng: -81.379236},
-  //set zoom, lower number means zoom out, and vice versa
-  zoom: 9,
-  //you can set map type to roadmap, terrain, satellite, or hybrid
-  mapTypeId: 'terrain',
-  //If you plan to move a control on the screen
-  //it is recommened to set that control to true to always show
-  mapTypeControl: true,
-  //this sets the position, go to docs to see other positions
-  mapTypeControlOptions: {
-  position: google.maps.ControlPosition.TOP_LEFT
-  },
-  //same as before, just different controls
-  fullscreenControl: true,
-  fullscreenControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP
-  },
-  streetViewControl: true,
-  streetViewControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP 
-  },
-  zoomControl: true,
-  zoomControlOptions: {
-  position: google.maps.ControlPosition.LEFT_TOP
-  }
+      center: {lat: 28.538335, lng: -81.379236},
+      //set zoom, lower number means zoom out, and vice versa
+      zoom: 9,
+      //you can set map type to roadmap, terrain, satellite, or hybrid
+      mapTypeId: 'terrain',
+      //If you plan to move a control on the screen
+      //it is recommened to set that control to true to always show
+      mapTypeControl: true,
+      //this sets the position, go to docs to see other positions
+      mapTypeControlOptions: {
+      position: google.maps.ControlPosition.TOP_LEFT
+      },
+      //same as before, just different controls
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+      position: google.maps.ControlPosition.LEFT_TOP
+      },
+      streetViewControl: true,
+      streetViewControlOptions: {
+      position: google.maps.ControlPosition.LEFT_TOP 
+      },
+      zoomControl: true,
+      zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_TOP
+      }
     });
+    // for Autocomplete search
+     autoSearch = new google.maps.places.Autocomplete(document.getElementById('search'));
+     geocoder = new google.maps.Geocoder();
   }
+  // when the submit button is clicked
+  $('#submit').on('click', function(){
+
+  // loop through locations
+    for (var i = 0; i < markers.length; i++){
+      // removew marker from map to do a new search. 
+       markers[i].setMap(null);
+    }
+
+    // get the search value
+    var searchValue = $('#search').val();
+
+      // use geocoder
+    geocoder.geocode({'address': searchValue}, function(results, status) {
+
+      if(status === 'OK'){
+          var geometry = results[0].geometry.location;
+          latitude = geometry.lat();
+          longitude = geometry.lng();        
+          console.log('lat: ' + location + ', lng: ' + longitude);
+          
+          // set marker at location
+          var marker = new google.maps.Marker({
+            position: {'lat': latitude, 'lng': longitude},
+            map:map
+        });
+
+        // here is were we add a new marker for each location
+        //center map to marker clicked
+        marker.addListener('click', function(){
+
+         // this refers to the marker that is clicked
+         map.setCenter(this.getPosition());
+
+        });
+
+        //center the map to the market position
+        map.setCenter(marker.getPosition());
+
+        // add it to the marker array
+        markers.push(marker);
+
+          // location that are near each other "marker"
+        locations = [
+          {'lat': latitude + 0.1, 'lng': longitude + 0.1},
+          {'lat': latitude + 0.1, 'lng': longitude + 0.1},
+          {'lat': latitude + 0.1, 'lng': longitude + 0.1},
+          {'lat': latitude + 0.1, 'lng': longitude + 0.1}
+        ];
+
+        // loop through locations
+        for (var i = 0; i < locations.length; i++) {
+           // make a new marker for each location
+          //     marker = new google.maps.Marker({
+          //     position: locations[i],
+          //     map: map
+          // });
+
+          // show direction on click
+          marker.addListener('click', function(){
+           if(typeof renderer !== 'undefined'){
+            // remove step by step directions
+            $('#map-directions').html('');
+            // remove renderer route from map
+            renderer.setMap(null);
+           }
+           // use Directions Service to get direction
+           var directionsService = new google.maps.DirectionsService();
+
+           // this will be the options passed into the Directions Service object
+           var directionsRequest = {
+            origin: markers[0].getPosition(),
+            destination: this.getPosition(),
+            travelMode: google.maps.DirectionsTravelMode.DRIVING
+           }
+
+           directionsService.route(
+            directionsRequest,
+            function(response, status){
+              if(status === google.maps.DirectionsStatus.OK){
+                renderer = new google.maps.DirectionsRenderer({
+                  map: map,
+                  directions: response
+                });
+                renderer.setPanel(document.getElementById('map-directions'));
+              }else{
+                console.log('unable to retreive route.')
+              }
+            });
+           //this refers to the marker that is clicked
+           // map.setCenter(this.getPosition());
+          });
+
+            // add it to the markers array
+           markers.push(marker)
+    }
+   } 
+
+
+  });
+
+
+});
+
 </script>
+<!-- google map-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChFKfGT-QBuYU5Wqu9jonp9Rp2sb0S35w&libraries=places&callback=initMap" type="text/javascript"></script>
 
 </body>
 
