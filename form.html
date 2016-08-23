@@ -69,7 +69,7 @@
           <input type="text" class="form-control" id="business" placeholder="Business Title">
         </div>
           <br>
-        <div class="bar" class="form-group">
+        <div class="bar" class="form-inline">
           <div class="col-sm-5">
           <label for="search">Address:</label>
           <input type="text" class="form-control" id="address" placeholder="Address">
@@ -97,37 +97,36 @@
                                         </select><br>
                                     </div>
                                     </div>
-            <div class="col-sm-2">
+                 
+  <label for="state" class="col-sm-4 control-label">State:</label>
+  <div class="col-sm-2">
+    <select class="form-control" id="state" name="state">
+      <option value="FL">FL</option>
+    </select>
+  
+</div>
+<br>
+<div class="col-sm-3">
           <label for="search">Zip Code:</label>
           <input type="text" class="form-control" id="zip" placeholder="Zip Code">
           </div>
                 </div>
-                </div>
-                
-                 <div class="form-group">
-  <label for="state" class="col-sm-1 control-label">State:</label>
-  <div class="col-sm-2">
-    <select class="form-control" id="state" name="state">
-      <option value="FL">FL</option>
-      
-    </select>
-  </div>
-</div>
+
   <br>
           <br>
           <br>
         <div class="panel panel-default">
             <div class="panel-body">
                 <!-- // datePicker // -->
-            <div class="form-group">
-                              <div class="col-sm-3">
+            <div class="dateTime" class="form-group">
+                              <div class="col-md-6">
                     <p class="date">Date:<input type="text" id="datepicker"></p>
             </div>
                     <div class="time"> 
-                        <div class="col-sm-6">
+                        <div class="col-md-5">
                             <p>Star Time: <input id="start" type="text"/></p>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-6">
                             <p>End Time: <input id="end" type="text"/></p>
                         </div>
                 </div>
