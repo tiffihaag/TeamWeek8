@@ -117,7 +117,7 @@ $("#search").on("click", function(){
         console.log ("I got this");
       }); //database.ref on value function
 
-        $('.searchResults').append("<div class='tableStuff'><span id='tableName'> "+childSnapshot.val().name+" </span></br><span id='tableEmail'> "+childSnapshot.val().email+"</span></br><span id='tableBusiness'> "+childSnapshot.val().business+"</span></br><span id='tableAddress'> "+childSnapshot.val().address+"</span></br><span id='tableCity'> "+childSnapshot.val().city+"</span></br><span id='tableState'> "+childSnapshot.val().state+"</span></br><span id='tableZip'> "+childSnapshot.val().zip+"</span></br><span id='tableDateTime'> "+childSnapshot.val().dateTime+"</span><span id='tableStart'> "+childSnapshot.val().start+"</span></br><span id='tableEnd'> "+childSnapshot.val().end+"</span></br><span id='tableComment'> "+childSnapshot.val().comment+"</span></div>");
+        $('.searchResults').append("<div class='tableStuff'><span id='tableName'> "+childSnapshot.val().name+" </span></br><span id='tableEmail'> "+childSnapshot.val().email+"</span></br><span id='tableBusiness'> "+childSnapshot.val().business+"</span></br><span id='tableAddress'> "+childSnapshot.val().address+"</span></br><span id='tableCity'> "+childSnapshot.val().city+"</span></br><span id='tableState'> "+childSnapshot.val().state+"</span></br><span id='tableZip'> "+childSnapshot.val().zip+"</span></br><span id='tableDateTime'> "+childSnapshot.val().dateTime+"</span><span id='tableStart'> "+childSnapshot.val().start+"</span></br><span id='tableEnd'> "+childSnapshot.val().end+"</span></br><span id='tableComment'> "+childSnapshot.val().comment+"</span></br></div>");
         
       }; //city equals city in database
     }); //for child_added childSnapshot

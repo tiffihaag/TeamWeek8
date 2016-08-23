@@ -6,15 +6,12 @@
 
 /* Global Styles */
 
+.weather {
+  margin-left: 300px;
+}
 .results{
   width: 100%;
   font-size: 28px;
-  font-weight: bold;
-}
-
-.resultsTable{
-  width: 100%;
-  font-size: 22px;
   font-weight: bold;
 }
 
@@ -28,10 +25,14 @@
   background-color: white;
 }
 .tableStuff {
-  height: 50%;
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1;
   }
+
+.tableDateTime{
+  line-height: 1;
+}
 
 h2{
   padding-right: 50px;
@@ -63,9 +64,10 @@ h2{
   background-color: white;
   border-style: solid;
   border-top: thick double black;
-  height: 550px;
+  height: 750px;
   padding-left: 50px;
   padding-right: 50px;
+  line-height: 1.5;
 }
 
 .searchBar{
@@ -376,7 +378,7 @@ footer {
 .calsub {
   background-color: white;
   opacity: 0.7;
-  width: 850px;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
 
