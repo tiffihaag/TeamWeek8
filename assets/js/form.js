@@ -13,6 +13,7 @@ $(document).ready(function(){
 
  // Declaring onclick function //
 $("#search").on("click", function(){
+  $('#formId').empty();
     console.log("it works");
 	// displays in firebase upside down //
 
