@@ -105,7 +105,6 @@ $("#search").on("click", function(){
 
     //Stuff For the Search Bar on index.html
     $("#searchDatabase").on("click", function(){
-       $('.tableStuff').empty();
       var cityName = $("#searchMe").val();
       console.log("hello");
       console.log("From database: " + cityName);
