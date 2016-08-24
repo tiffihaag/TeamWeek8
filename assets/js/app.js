@@ -1,6 +1,5 @@
 //Google Sign In
 $( document ).ready(function() {
-  $('#hideFooter').hide();
   var googleUser = {};
 
     var startApp = function() {
