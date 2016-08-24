@@ -85,6 +85,7 @@ $( document ).ready(function() {
     $("#mysignin2").hide();
     $(".text-vertical-center2").hide();
     $(".searchResults").hide();
+    $("#pageFooter1").hide();
     //$(".AfterLogin").css({"visibility", "visible"});
     //$(".Login").hide();
     }
